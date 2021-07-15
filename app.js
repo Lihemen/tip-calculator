@@ -10,7 +10,7 @@ const billPerPersonScreen = document.querySelector('.billamount');
 var data = {
   bill: 0,
   tip: 0,
-  people: 0,
+  people: 1,
 };
 
 billInput.addEventListener('change', function () {
@@ -65,8 +65,12 @@ class PaymentSystem {
 
 tipPercents.forEach((btn) => {
   btn.addEventListener('click', function () {
-    toggleTip(this.value);
     btn.classList.toggle('selected');
+    if (btn.classList.contains('selected')) {
+      toggleTip(this.value);
+    } else {
+      toggleTip('0%');
+    }
     removeSiblingWithMatchingSelector(btn, 'selected');
   });
 });
@@ -103,7 +107,7 @@ function toggleTip(val) {
       showModal();
       break;
     default:
-      data = { ...data, tip: 5 };
+      data = { ...data, tip: 0 };
       break;
   }
 }
@@ -170,7 +174,7 @@ function reset() {
   data = {
     bill: 0,
     tip: 0,
-    people: 0,
+    people: 1,
   };
   billInput.value = 0;
   noPeople.value = 0;
