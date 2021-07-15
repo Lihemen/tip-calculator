@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <main class="main">
+      <h2>TIP CALCULATOR</h2>
+      <div class="splitter">
+        <div class="controls">
+          <div class="control__group-1">
+            <h5>Bill</h5>
+            <div class="input_container">
+              <span class="input__icon">$</span>
+              <input
+                type="text"
+                placeholder="0"
+                name="bill"
+                class="input"
+                value="0"
+              />
+            </div>
+          </div>
+          <div class="control__group-2 rs--2">
+            <h5>Select Tip %</h5>
+            <div class="button_grid">
+              <input
+                class="btn"
+                type="button"
+                value="5%"
+                name="tipPercentage"
+              />
+              <input
+                class="btn"
+                type="button"
+                value="10%"
+                name="tipPercentage"
+              />
+              <input
+                class="btn"
+                type="button"
+                value="15%"
+                name="tipPercentage"
+              />
+              <input
+                class="btn"
+                type="button"
+                value="25%"
+                name="tipPercentage"
+              />
+              <input
+                class="btn"
+                type="button"
+                value="50%"
+                name="tipPercentage"
+              />
+              <input
+                class="btn"
+                type="button"
+                value="Custom"
+                name="tipPercentage"
+              />
+            </div>
+          </div>
+          <div class="control__group-3">
+            <h5>Number of People</h5>
+            <div class="input_container">
+              <!-- <span class="input__icon">m</span> -->
+              <input
+                type="text"
+                placeholder="0"
+                name="noPeople"
+                value="0"
+                class="input"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <div class="tipDisplay">
+            <p>Tip Amount <span class="subtitle"> / person</span></p>
+            <p class="tipamount">$0. 00</p>
+          </div>
+          <div class="tipDisplay">
+            <p>Total <span class="subtitle"> / person</span></p>
+            <p class="billamount">$0. 00</p>
+          </div>
+          <div class="tipDisplay">
+            <button type="submit" class="btn btn--lighter" id="checkoutBtn">
+              Checkout
+            </button>
+            <button type="submit" class="btn btn--lighter" id="resetBtn">
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
